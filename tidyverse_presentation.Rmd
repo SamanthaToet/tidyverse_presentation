@@ -1,0 +1,125 @@
+---
+title: "Contributing to Open Source"
+subtitle: "<img src = https://avatars0.githubusercontent.com/u/22032646?s=280&v=4></br> UVA UseR Meetup"
+author: "Samantha Toet"
+date: "2019/03/06"
+output:
+  xaringan::moon_reader:
+    css: ["default", "rladies", "rladies-fonts"]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+class: center, middle
+
+# rstudioconf::2019
+
+<insert image from conf>
+
+???
+
+---
+
+class: inverse, center, middle
+
+# tidyverse
+
+???
+
+---
+
+# A streamlined workflow 
+
+
+```{r eval=FALSE}
+library(tidyverse)
+```
+
+<insert image of tidy workflow>
+
+???
+
+The tidyverse is a collection of R packages designed for data science. All packages share an underlying design philosophy, grammar, and data structures.
+
+Come for the stickers and cool package names. Stay for the friendly community and happy workflow. 
+
+---
+
+class: center, middle 
+
+# tidyverse developer day
+
+<insert image from tidyverse dev day>
+
+???
+
+The idea of tidyverse dev day was to have a day where anyone interested in contributing to the tidyverse can work together on anything ranging from submitting your first pull request, to working on your own package. The tidyverse team will be there, so we can help you hit the ground running and/or get over any stumbling blocks that you encounter.
+
+---
+class: center, middle
+
+# How was I feeling?
+
+---
+class: inverse, center, middle 
+
+<iframe src="https://giphy.com/embed/xDQ3Oql1BN54c" width="480" height="332" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/dog-confused-i-have-no-idea-what-im-doing-xDQ3Oql1BN54c">via GIPHY</a></p>
+
+???
+Pretty freaked out. 
+
+---
+
+# Setup: tagged issues on GitHub
+
+<insert screenshot of github>
+
+---
+
+# It takes a village 
+
+???
+They set it up to be very beginner friendly (1st PR, etc.)
+
+Most worked in groups, I worked with Jessie, Nate, and Alison. 
+
+They had devs circuling asking for help. They gave each group a stack of post its to stick to your computer and flag you as needing help. 
+___
+
+
+# Here's the one we picked:
+
+<insert screenshot of issue>
+
+??? 
+
+Issues were going fast. Some of the ones that I thought would be more like low hanging fruit (ex. adding documentation, adding more tests) were being snatched up. 
+
+---
+
+# Why that one?
+
+???
+
+It looked easy: Hadley litterally said what needed to be done and how to do it in the description. 
+---
+
+## How we begun
+
+---
+
+
+---
+
+class: center, middle
+
+# Thanks!
+
+Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
+

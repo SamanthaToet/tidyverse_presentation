@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>Contributing to Open Source</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Samantha Toet" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/rladies.css" rel="stylesheet" />
+    <link href="libs/remark-css/rladies-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Contributing to Open Source
+## <img src = https://avatars0.githubusercontent.com/u/22032646?s=280&v=4></br> UVA UseR Meetup
+### Samantha Toet
+### 2019/03/06
+
+---
+
+
+
+class: center, middle
+
+# rstudioconf::2019
+
+&lt;insert image from conf&gt;
+
+???
+
+---
+
+class: inverse, center, middle
+
+# tidyverse
+
+???
+
+---
+
+# A streamlined workflow 
+
+
+
+```r
+library(tidyverse)
+```
+
+&lt;insert image of tidy workflow&gt;
+
+???
+
+The tidyverse is a collection of R packages designed for data science. All packages share an underlying design philosophy, grammar, and data structures.
+
+Come for the stickers and cool package names. Stay for the friendly community and happy workflow. 
+
+---
+
+class: center, middle 
+
+# tidyverse developer day
+
+&lt;insert image from tidyverse dev day&gt;
+
+???
+
+The idea of tidyverse dev day was to have a day where anyone interested in contributing to the tidyverse can work together on anything ranging from submitting your first pull request, to working on your own package. The tidyverse team will be there, so we can help you hit the ground running and/or get over any stumbling blocks that you encounter.
+
+---
+class: center, middle
+
+# How was I feeling?
+
+---
+class: inverse, center, middle 
+
+&lt;iframe src="https://giphy.com/embed/xDQ3Oql1BN54c" width="480" height="332" frameBorder="0" class="giphy-embed" allowFullScreen&gt;&lt;/iframe&gt;&lt;p&gt;&lt;a href="https://giphy.com/gifs/dog-confused-i-have-no-idea-what-im-doing-xDQ3Oql1BN54c"&gt;via GIPHY&lt;/a&gt;&lt;/p&gt;
+
+???
+Pretty freaked out. 
+
+---
+
+# Setup: tagged issues on GitHub
+
+&lt;insert screenshot of github&gt;
+
+---
+
+# It takes a village 
+
+???
+They set it up to be very beginner friendly (1st PR, etc.)
+
+Most worked in groups, I worked with Jessie, Nate, and Alison. 
+
+They had devs circuling asking for help. They gave each group a stack of post its to stick to your computer and flag you as needing help. 
+___
+
+
+# Here's the one we picked:
+
+&lt;insert screenshot of issue&gt;
+
+??? 
+
+Issues were going fast. Some of the ones that I thought would be more like low hanging fruit (ex. adding documentation, adding more tests) were being snatched up. 
+
+---
+
+# Why that one?
+
+???
+
+It looked easy: Hadley litterally said what needed to be done and how to do it in the description. 
+---
+
+## How we begun
+
+---
+
+
+---
+
+class: center, middle
+
+# Thanks!
+
+Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
