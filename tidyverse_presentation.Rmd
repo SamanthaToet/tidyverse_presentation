@@ -82,9 +82,20 @@ The environment was incredibly casual, welcoming and encouraging - it was hard t
 
 # General workflow
 
+--
+
 ### 1. Find an issue 
+
+--
+
 ### 2. Claim it by making a comment 
+
+--
+
 ### 3. Make a pull request
+
+--
+
 ### 4. Need help? Stick a post it to your computer
 
 ???
@@ -92,9 +103,11 @@ Easy enough, right? But where do you even start? There's a lot that goes on on G
 
 ---
 
-# Good place to start on Github: issue tags
+# Good place to start: Github issue tags
 
 ![](tidyverse_presentation_files/images/issues.png)
+
+--
 
 ### **tidy-dev-day** 🤓
 ### **help-wanted** ❤️
@@ -118,6 +131,9 @@ Jesse, Nate, Alison, Romain, Hadley, and like four other people whose names I di
 
 ![](tidyverse_presentation_files/images/446.png)
 
+--
+
+TLDR; `complete` and `expand` should be able to work with lists. 
 
 ???
 
@@ -130,6 +146,8 @@ Basically, the issue that Garret raised was a feature request. Long story short,
 # Why that one?
 
 ![](tidyverse_presentation_files/images/instr.png)
+
+--
 
 We want the functions `complete` and `expand` to be able to handle lists. To do this, Hadley said we needed to update a function that `complete` and `expand` both use, called `crossing`. 
 
@@ -147,16 +165,18 @@ class: inverse, center, middle
 
 ---
 
-## The overall process looked like this:
+## The process looked more like this:
+
+![](tidyverse_presentation_files/images/diff.png)
 
 1. Update `crossing` with a special case for lists
 2. HW says we should prob do that work in `ulevels` instead
 3. Undo everything from step 1, find `ulevels`, and figure out what it does
 4. Add the list case there - that fixes `crossing`! On to `complete`
-5. Hm,`complete` uses `join` and `join` doesn't work with list columns
+5. Hm, `complete` uses `join` and `join` doesn't work with list columns
 6. RF says it's coming in dplyr 3.9 - so partial fix for `expand` 
 7. Update the docs with `styler`, simplify code, add and update tests
-8. Repeat
+8. Repeat, maybe even a second or third time
 9. Merge and celebrate 🎉
 
 ---
@@ -165,29 +185,39 @@ class: inverse
 
 # Key takeaways 
 
-### It's a team effort 
+--
 
-### It doesn't have to be profound
+### 👯 It's a team effort 
 
-### It's messy
+--
+
+### 🔧 It doesn't have to be profound
+
+--
+
+### 🤯 It's messy
 
 
 ---
 # Other ways to contribute
 
-- Github Issues tagged: tidy-dev-day, help-wanted, reprex, etc. 
+Rather than directly contributing via Github issues, there are other ways to contribute indirectly that may be more helpful than you think: 
 
-- RStudio Community 
+![](tidyverse_presentation_files/images/community.png)
 
-- Stack Overflow
+- [RStudio Community](https://community.rstudio.com/)
+- [Stack Overflow](https://stackoverflow.com/questions/tagged/r) 
+- [Cville Open Data](http://opendata.charlottesville.org/)
+- [rstats hashtag](https://twitter.com/search?q=%23rstats&src=typd)
 
-- Cville Open Data
+---
 
-- rstats hashtag
+# Beyond fixing things
 
-- blog about your current learning process
+From David Robinson's keynote, [The Unreasonable Effectiveness of Public Work](https://resources.rstudio.com/rstudio-conf-2019/the-unreasonable-effectiveness-of-public-work)
 
-- give a talk *wink wink nudge nudge*
+![](tidyverse_presentation_files/images/contrib.png)
+
 
 ---
 
