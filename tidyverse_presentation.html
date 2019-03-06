@@ -25,54 +25,38 @@ class: center, middle
 
 # rstudioconf::2019
 
-&lt;insert image from conf&gt;
+![](tidyverse_presentation_files/images/conf_collage.png "image from JD Long")
 
 ???
+So it all started at rstudioconf.
 
+There were almost 2000 attendees. This is only one talk - there were three others going on at this exact same time - just to give you an idea of scale. 
+Everyone was incredibly excited, eager, and friendly. 
 ---
 
 class: inverse, center, middle
 
-# tidyverse
+![](tidyverse_presentation_files/images/devday.jpg)
+---
+# An open source hackathon 
+
+![](tidyverse_presentation_files/images/tdd_std.png)
 
 ???
+Tidyverse developer day was an event organized by the tidyverse team for the day after the conference. The idea was to have a day where anyone interested in contributing to the tidyverse can work together on anything ranging from submitting your first pull request, to working on your own package. 
+
+There were only about 100 or so tickets available and all proceeds were going to a local charity aimed towards teaching STEM to underrepresented youths. 
+
+About two weeks before the conference, the organizers sent out an email to everyone registered with a brief survey. The survey mainly gauged Git and GitHub competency and overall interests (EX. data cleaning, visualization, modeling, tidy eval, etc. )
 
 ---
 
-# A streamlined workflow 
-
-
-
-```r
-library(tidyverse)
-```
-
-&lt;insert image of tidy workflow&gt;
-
-???
-
-The tidyverse is a collection of R packages designed for data science. All packages share an underlying design philosophy, grammar, and data structures.
-
-Come for the stickers and cool package names. Stay for the friendly community and happy workflow. 
-
----
-
-class: center, middle 
-
-# tidyverse developer day
-
-&lt;insert image from tidyverse dev day&gt;
-
-???
-
-The idea of tidyverse dev day was to have a day where anyone interested in contributing to the tidyverse can work together on anything ranging from submitting your first pull request, to working on your own package. The tidyverse team will be there, so we can help you hit the ground running and/or get over any stumbling blocks that you encounter.
-
----
 class: center, middle
 
 # How was I feeling?
 
 ---
+
 class: inverse, center, middle 
 
 &lt;iframe src="https://giphy.com/embed/xDQ3Oql1BN54c" width="480" height="332" frameBorder="0" class="giphy-embed" allowFullScreen&gt;&lt;/iframe&gt;&lt;p&gt;&lt;a href="https://giphy.com/gifs/dog-confused-i-have-no-idea-what-im-doing-xDQ3Oql1BN54c"&gt;via GIPHY&lt;/a&gt;&lt;/p&gt;
@@ -80,52 +64,147 @@ class: inverse, center, middle
 ???
 Pretty freaked out. 
 
+Not only was I warn out by the conference (did I mention I did a two-day workshop on building packages?), but I felt completely out of my league. Sure, I knew in theory tidy and git philosophy, but I had only really made a few pull requests before, and none of them were too complicated. In all honesty I debating not going, but I had my encouraging partner with me and I figured I would at least try it out. If it wasn't for me I could leave. At least I would get breakfast tacos. 
+
+So what what it really like?
+
 ---
 
-# Setup: tagged issues on GitHub
+class: center, middle 
 
-&lt;insert screenshot of github&gt;
+
+![](tidyverse_presentation_files/images/devday_collage.png)
+
+???
+
+After going over the code of conduct and introducing everyone on the tidyverse team they explained that we would be primarily working off of tagged issues on GitHub. 
+
+They loosely organized everyone in the room: first time Git and GitHub users would sit on one side of the room and work with Jenny, people interested in modeling would work with Max, dplyr with Romain - but in general everyone was set up at a small table and people would move from table to table often.
+
+The environment was incredibly casual, welcoming and encouraging - it was hard to tell the difference between who was new and who was more experienced. Also, did I mention that there were breakfast tacos?
+
+---
+
+# General workflow
+
+### 1. Find an issue 
+### 2. Claim it by making a comment 
+### 3. Make a pull request
+### 4. Need help? Stick a post it to your computer
+
+???
+Easy enough, right? But where do you even start? There's a lot that goes on on GitHub, so how do you find an issue?
+
+---
+
+# Good place to start on Github: issue tags
+
+![](tidyverse_presentation_files/images/issues.png)
+
+### **tidy-dev-day** 🤓
+### **help-wanted** ❤️
+### **reprex**
+
+???
+You don't need to reinvent the wheel. In open source, every contribution matters - even the less glamourous ones like fixing documentation (Markdown) or adding reproducible examples (reprexes) to existing issues. 
 
 ---
 
 # It takes a village 
 
+&lt;iframe src="https://giphy.com/embed/l3q2Wl7Wpz09Z5hfi" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen&gt;&lt;/iframe&gt;&lt;p&gt;&lt;a href="https://giphy.com/gifs/bear-power-team-l3q2Wl7Wpz09Z5hfi"&gt;via GIPHY&lt;/a&gt;&lt;/p&gt;
+
 ???
-They set it up to be very beginner friendly (1st PR, etc.)
+Jesse, Nate, Alison, Romain, Hadley, and like four other people whose names I didn't get.  
 
-Most worked in groups, I worked with Jessie, Nate, and Alison. 
+---
 
-They had devs circuling asking for help. They gave each group a stack of post its to stick to your computer and flag you as needing help. 
-___
+# Our issue
+
+![](tidyverse_presentation_files/images/446.png)
 
 
-# Here's the one we picked:
-
-&lt;insert screenshot of issue&gt;
-
-??? 
+???
 
 Issues were going fast. Some of the ones that I thought would be more like low hanging fruit (ex. adding documentation, adding more tests) were being snatched up. 
+
+Basically, the issue that Garret raised was a feature request. Long story short, the complete and expand functions should be able to handle lists. 
 
 ---
 
 # Why that one?
 
+![](tidyverse_presentation_files/images/instr.png)
+
+We want the functions `complete` and `expand` to be able to handle lists. To do this, Hadley said we needed to update a function that `complete` and `expand` both use, called `crossing`. 
+
 ???
 
-It looked easy: Hadley litterally said what needed to be done and how to do it in the description. 
----
-
-## How we begun
+It looked easy: Hadley literally said what needed to be done and how to do it in the description. Words like "simple" and "quick fix" works for me.
 
 ---
 
+class: inverse, center, middle
+
+# Turns out it wasn't a quick fix...
+
+![](tidyverse_presentation_files/images/hex-tidyr.png)
 
 ---
 
-class: center, middle
+## The overall process looked like this:
 
-# Thanks!
+1. Update `crossing` with a special case for lists
+2. HW says we should prob do that work in `ulevels` instead
+3. Undo everything from step 1, find `ulevels`, and figure out what it does
+4. Add the list case there - that fixes `crossing`! On to `complete`
+5. Hm,`complete` uses `join` and `join` doesn't work with list columns
+6. RF says it's coming in dplyr 3.9 - so partial fix for `expand` 
+7. Update the docs with `styler`, simplify code, add and update tests
+8. Repeat
+9. Merge and celebrate 🎉
+
+---
+
+class: inverse
+
+# Key takeaways about 
+# contributing to open source:
+
+### It's a team effort 
+
+### It doesn't have to be profound
+
+### It's messy
+
+
+---
+# Other ways to contribute
+
+- Github Issues tagged: tidy-dev-day, help-wanted, reprex, etc. 
+
+- RStudio Community 
+
+- Stack Overflow
+
+- Cville Open Data
+
+- rstats hashtag
+
+---
+
+class: inverse, center, middle
+
+# Thanks! 🙌
+
+samantha@rstudio.com
+
+Twitter: @Samantha_Toet
+
+Github: SamanthaToet
+
+
+
 
 Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
     </textarea>
